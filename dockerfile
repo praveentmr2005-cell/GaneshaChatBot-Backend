@@ -6,7 +6,7 @@ WORKDIR /app
 
 # 3. Install only the essential system dependency: ffmpeg
 # This is still needed to convert the user's uploaded audio.
-RUN apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
+RUN apt-get update 
 
 # 4. Copy and install Python requirements
 # This is done first to take advantage of Docker's layer caching
@@ -22,3 +22,4 @@ EXPOSE 8000
 
 # 7. The command to run your Flask app in production
 CMD ["gunicorn", "--workers", "2", "--threads", "2", "--bind", "0.0.0.0:8000", "app:app"]
+
