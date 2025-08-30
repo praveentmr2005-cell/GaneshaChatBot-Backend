@@ -1,0 +1,12 @@
+flask
+flask_cors
+gunicorn
+google-generativeai
+python-dotenv
+soundfile
+numpy
+pydantic
+langchain-community
+sentence-transformers
+torch
+chromadb
